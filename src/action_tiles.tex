@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=5mm,top=20mm]{geometry}
+\input{libs.tex}
+\input{colors.tex}
+\input{game_board_definitions.tex}
+\input{action_tile_definitions.tex}
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+\hyphenpenalty=10000
+
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\placeForestAction
+	\actionTileCost{5}
+	\terraformingReward{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\placeForestAction
+	\actionTileCost{5}
+	\terraformingReward{2}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\placeWaterAction
+	\actionTileCost{7}
+	\terraformingReward{4}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\placeCityAction
+	\actionTileCost{6}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\groomProjectsAction
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\groomProjectsAction
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\implementProjectAction
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\implementProjectAction
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\activateProjectsAction
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\actionTile
+	\activateProjectsAction
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\supportActionTile{0}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\supportActionTile{2}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\supportActionTile{4}
+\end{tikzpicture}%
+
+\end{center}
+\end{document}

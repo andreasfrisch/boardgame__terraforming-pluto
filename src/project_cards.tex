@@ -1,0 +1,509 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=5mm,top=20mm]{geometry}
+\input{libs.tex}
+\input{colors.tex}
+\input{game_board_definitions.tex}
+\input{card_definitions.tex}
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+\hyphenpenalty=10000
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\middlePlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\middlePlaceTile{water}{icons/water_white.png}
+	\terraformingPoints{4}
+\end{tikzpicture}%
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\middlePlaceTile{city}{icons/city_white.png}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\middlePlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\middlePlaceTile{water}{icons/water_white.png}
+	\terraformingPoints{4}
+\end{tikzpicture}%
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\middlePlaceTile{city}{icons/city_white.png}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\middleCollectIncome
+\end{tikzpicture}%
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\middleGainAction
+\end{tikzpicture}%
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\terraformingPoints{5}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{0}
+	\middleGainMoney{7}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{X}
+	\middleGainMoney{2X}
+\end{tikzpicture}%
+
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredOtherAbility
+	\topPlaceTile{city}{icons/city_white.png}
+	\bottomDrawCard
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredSelfAbility
+	\topPlaceTile{city}{icons/city_white.png}
+	\bottomPlayCard
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\triggeredOtherAbility
+	\topPlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\triggeredSelfAbility
+	\topPlaceTile{forest}{icons/leaf_white.png}
+	\bottomGainMoney{2}
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredOtherAbility
+	\topPlaceTile{water}{icons/water_white.png}
+	\bottomDrawCard
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredSelfAbility
+	\topPlaceTile{water}{icons/water_white.png}
+	\bottomGainMoney{3}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredOtherAbility
+	\topPlaceTile{city}{icons/city_white.png}
+	\bottomGainMoney{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredSelfAbility
+	\topPlaceTile{city}{icons/city_white.png}
+	\bottomDrawCard
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\triggeredSelfAbility
+	\topCollectIncome
+	\bottomGainMoney{2}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{6}
+	\triggeredOtherAbility
+	\topCollectIncome
+	\bottomGainMoney{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredOtherAbility
+	\topDrawCard
+	\bottomGainMoney{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredSelfAbility
+	\topDrawCard
+	\bottomDrawCard
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\triggeredSelfAbility
+	\topDrawCard
+	\bottomPlayCard
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredOtherAbility
+	\topPlayCard
+	\bottomGainMoney{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\triggeredSelfAbility
+	\topGainMoney{3+}
+	\bottomGainMoney{1}
+\end{tikzpicture}%
+\newline
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\triggeredSelfAbility
+	\topSpendMoney{4+}
+	\bottomGainMoney{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\triggeredOtherAbility
+	\topTileFlip
+	\bottomGainMoney{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\triggeredSelfAbility
+	\topTileFlip
+	\terraformingPoints{2}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredSelfAbility
+	\topTileFlip
+	\bottomGainMoney{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredSelfAbility
+	\topTileFlip
+	\bottomDrawCard
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{6}
+	\triggeredSelfAbility
+	\topTileFlip
+	\bottomGainAction
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{1}
+	\activatedAbility
+	\bottomGainMoney{4}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\activatedAbility
+	\activationCost{1}
+	\bottomPlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\activatedAbility
+	\terraformingPoints{2}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\activatedAbility
+	\bottomDrawCard
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{6}
+	\activatedAbility
+	\activationCost{4}
+	\bottomPlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{4}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\activatedAbility
+	\activationCost{5}
+	\bottomPlaceTile{city}{icons/city_white.png}
+	\terraformingPoints{2}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\activatedAbility
+	\activationCost{1}
+	\bottomPlayCard
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\activatedAbility
+	\bottomTileFlip
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{6}
+	\activatedAbility
+	\activationCost{4}
+	\bottomCollectIncome
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{6}
+	\activatedAbility
+	\activationCost{2}
+	\bottomPlayCard
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\activatedAbility
+	\activationCost{2}
+	\bottomDrawCard
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\activatedAbility
+	\bottomTileFlip
+	\terraformingPoints{1}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\activatedAbility
+	\activationCost{1}
+	\bottomGainAction
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{1}
+	\activatedAbility
+	\activationCost{4}
+	\bottomGainAction
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredOtherAbility
+	\activationCost{5}
+	\topPlaceTile{city}{icons/city_white.png}
+	\bottomPlaceTile{city}{icons/city_white.png}
+	\terraformingPoints{1}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\triggeredOtherAbility
+	\activationCost{5}
+	\topPlaceTile{water}{icons/water_white.png}
+	\bottomPlaceTile{water}{icons/water_white.png}
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{3}
+	\triggeredOtherAbility
+	\activationCost{4}
+	\topPlaceTile{water}{icons/water_white.png}
+	\bottomPlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{1}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\triggeredSelfAbility
+	\activationCost{4}
+	\topCollectIncome
+	\bottomGainAction
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{6}
+	\activatedAbility
+	\activationCost{3}
+	\terraformingPoints{3}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{2}
+	\activatedAbility
+	\activationCost{6}
+	\bottomPlaceTile{forest}{icons/leaf_white.png}
+	\terraformingPoints{3}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{4}
+	\activatedAbility
+	\activationCost{X}
+	\bottomGainMoney{2X}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{25}
+	\middleAbilityText{End the game}
+	\terraformingPoints{-8}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{0}
+	\activatedAbility
+	\activationCost{12}
+	\bottomPlaceTile{water}{icons/water_white.png}
+	\terraformingPoints{5}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{8}
+	\activatedAbility
+	\activationCost{2}
+	\terraformingPoints{3}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{8}
+	\activatedAbility
+	\activationCost{6}
+	\bottomTileAndAction{forest}{icons/leaf_white.png}
+	\terraformingPoints{2}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\activatedAbility
+	\activationCost{2}
+	\terraformingPointsPerTile{1}{city}{icons/city_white.png}
+\end{tikzpicture}%
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\activatedAbility
+	\activationCost{2}
+	\terraformingPointsPerTile{1/2}{forest}{icons/leaf_white.png}
+\end{tikzpicture}%
+
+\noindent
+\begin{tikzpicture}
+	\cardborder
+	\cardcost{5}
+	\activatedAbility
+	\activationCost{2}
+	\terraformingPointsPerTile{1}{water}{icons/water_white.png}
+\end{tikzpicture}%
+
+
+\end{center}
+\end{document}

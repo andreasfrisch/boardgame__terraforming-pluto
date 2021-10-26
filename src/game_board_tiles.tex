@@ -1,0 +1,41 @@
+\documentclass[landscape]{article}
+\input{libs.tex}
+\input{colors.tex}
+\input{game_board_definitions.tex}
+
+\usetikzlibrary{shapes}
+
+\begin{document}
+\begin{center}
+\pagestyle{empty}
+
+% Water
+\foreach \j in {0,...,5}{%
+\begin{tikzpicture}
+	\node[hexa,fill=water] at (0,0) {
+		\includegraphics[width=\hexIconSize cm]{icons/water_white.png}
+	};
+\end{tikzpicture}
+}
+
+% Forest
+\foreach \j in {0,...,15}{%
+\begin{tikzpicture}
+	\node[hexa,fill=forest] at (0,0) {
+		\includegraphics[width=\hexIconSize cm]{icons/leaf_white.png}
+	};
+\end{tikzpicture}
+}
+
+% City
+\foreach \j in {0,...,5}{%
+\begin{tikzpicture}
+	\node[hexa,fill=city] at (0,0) {
+		\includegraphics[width=\hexIconSize cm]{icons/city_white.png}
+	};
+\end{tikzpicture}
+}
+
+
+\end{center}
+\end{document}

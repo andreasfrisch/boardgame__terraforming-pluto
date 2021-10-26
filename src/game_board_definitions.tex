@@ -1,0 +1,41 @@
+\usetikzlibrary{shapes}
+
+\pgfmathsetmacro{\hexSize}{2.5}
+\pgfmathsetmacro{\hexIconSize}{0.5*\hexSize}
+\pgfmathsetmacro{\tinyhexSize}{0.2*\hexSize}
+\pgfmathsetmacro{\tinyhexIconSize}{0.5*\tinyhexSize}
+% In the pointy orientation, a hexagon has:
+% width w = sin(60) * size
+% The horizontal distance between adjacent hexagon centers is w.	
+\pgfmathsetmacro{\hdist}{sin(60)*\hexSize}
+
+\tikzset{
+	hexa/.style= {
+		shape=regular polygon,
+		regular polygon sides=6,
+		minimum size=\hexSize cm, draw,
+		inner sep=0,anchor=south,
+		fill=lightgray!80!white,
+		rotate=30 % looks quite interesting without this
+	}
+}
+\tikzset{
+	flathexa/.style= {
+		shape=regular polygon,
+		regular polygon sides=6,
+		minimum size=\hexSize cm, draw,
+		inner sep=0,anchor=south,
+		fill=lightgray!80!white
+		% rotate=30 % looks quite interesting without this
+	}
+}
+\tikzset{
+	tinyhexa/.style= {
+		shape=regular polygon,
+		regular polygon sides=6,
+		minimum size=\tinyhexSize cm, draw,
+		inner sep=0,anchor=south,
+		fill=lightgray!80!white
+		% rotate=30 % looks quite interesting without this
+	}
+}
